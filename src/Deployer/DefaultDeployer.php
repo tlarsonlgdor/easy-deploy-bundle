@@ -264,7 +264,7 @@ abstract class DefaultDeployer extends AbstractDeployer
 
         $this->log('<h3>Copying the updated code to the new release directory</>');
         $this->runRemote(sprintf('cp -pPR {{ deploy_dir }}/repo/* {{ project_dir }}'));
-        $this->runRemote(sprintf('cp -p {{ deploy_dir }}/repo/.env* {{ project_dir }}'));
+        //$this->runRemote(sprintf('cp -p {{ deploy_dir }}/repo/.env* {{ project_dir }}'));
     }
 
     private function doCreateCacheDir(): void
